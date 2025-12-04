@@ -1,5 +1,5 @@
 
-import { createStore } from "redux";
+const {createStore} = Redux
 const initialState={
     value:0
 }
@@ -20,7 +20,7 @@ const btnInc = document.getElementById('increment');
 const btnDec = document.getElementById('decrement');
 
 store.subscribe(()=>{
-    valueLabel.textContent=store.getState().value
+valueLabel.innerText=store.getState().value
 })
 
 btnInc.onclick=()=>store.dispatch({type:'increment'})
